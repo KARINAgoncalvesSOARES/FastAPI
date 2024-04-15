@@ -37,7 +37,7 @@ Requer os seguintes parâmetros:
 
     * gender: Gênero do usuário (1 para homem, 2 para mulher).
 
-    * education: Nível de escolaridade do usuário (1 para licenciatura, 2 para associado, 3 para bacharelado, 4 para mestrado, 5 para doutorado).
+    * education: Nível de escolaridade do usuário (1 para licenciatura, 2 para associate, 3 para bacharelado, 4 para mestrado, 5 para doutorado).
 
     * exp_online: Anos de experiência com compras online.
 
@@ -45,7 +45,7 @@ Requer os seguintes parâmetros:
 """
 # Previsão simples do aplicativo de supermercado na Hungria (usando FastAPI)
 
-class_App_names = ['FoodPanda', 'Wolt', 'Spar', 'Tesco online', 'myLidl']
+#class_App_names = ['FoodPanda', 'Wolt', 'Spar', 'Tesco online', 'myLidl']
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -54,7 +54,7 @@ from sklearn.ensemble import RandomForestClassifier
 import pickle # Serialização e desserialização
 import os
 
-filePath = os.path.join(os.getcwd(), '2_fastapi/data_mercado.csv')
+filePath = os.path.join(os.getcwd(), '/home/karinag/karina_python/github/FastAPI/2_fastapi/data_mercado.csv')
 
 # 1. Abrindo os dados para leitura
 data = pd.read_csv(filePath)
@@ -67,7 +67,7 @@ x = data.drop("Apps", axis=1)
 y = data["Apps"]
 
 # 4. Separando os dados em treino e teste
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=42)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
 # 5. Criando o modelo
 clf = RandomForestClassifier()
@@ -83,7 +83,7 @@ acc = accuracy_score(y_test, y_preds)
 print(f"A acurácia do modelo é: {round((acc*100),2)}%")
 
 # 9. Salvando o modelo
-#filename = "clf_silple.pkl"
+#filename = "/home/karinag/karina_python/github/FastAPI/2_fastapi/clf_silple.pkl"
 #pickle.dump(clf, open(filename, 'wb'))
 
 # 10. carregue o modelo e faça uma previsão
