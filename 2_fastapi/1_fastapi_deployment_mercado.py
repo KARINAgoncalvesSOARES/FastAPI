@@ -10,7 +10,7 @@ Link de estudo:
 """
 
 """
-Previsão de aplicativo de mercearia preferível na Hungria 🇭🇺
+Previsão de aplicativo de mercearia preferível na Hungria 🛒 🇭🇺
 ============================================================
 
 Este aplicativo FastAPI foi projetado para prever o aplicativo de mercearia preferível na Hungria com base nas informações do usuário,
