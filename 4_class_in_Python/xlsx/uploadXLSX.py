@@ -42,4 +42,4 @@ if __name__ == "__main__":
     
     # Exibindo o DataFrame
     if df is not None:
-        print(df)
+        print(df)	
